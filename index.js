@@ -47,7 +47,8 @@ conn.sync({ force: true }).then((next) => {
   })
   .catch(err => console.error(err))
   console.log("dietas precargadas") 
-  server.listen(3001, () => {
+  const PORT = process.env.PORT || 3001
+  server.listen(PORT, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console 
   });
 });
